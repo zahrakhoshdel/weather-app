@@ -7,11 +7,11 @@
 * [Demo](#demo)
 * [Screenshots](#screenshots)
 * [Features](#features)
-* [Packages In Use](#packages)
+* [Packages In Use](#packages-in-use)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
-* [Show Your Support](#support)
+* [Show Your Support](#show-your-support)
 * [Author](#author)
 
 ## Demo
