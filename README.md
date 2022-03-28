@@ -7,7 +7,7 @@
 * [Demo](#demo)
 * [Screenshots](#screenshots)
 * [Features](#features)
-* [Packages in use](#packages)
+* [Packages In Use](#packages)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
@@ -18,7 +18,9 @@
 
 Demo Video
 
-https://github.com/zahrakhoshdel/weather-app/blob/main/screenshots/Weather%20App.mp4
+
+https://user-images.githubusercontent.com/91828519/160483013-d8f6e32c-50bb-4cf4-ad3d-f9b368d1c42d.mp4
+
 
 ## 🚀 See Screenshots
 
@@ -46,7 +48,7 @@ https://github.com/zahrakhoshdel/weather-app/blob/main/screenshots/Weather%20App
 - :white_check_mark: Custom icons for each weather condition
 - :white_check_mark: Null safety
 
-## Packages in use
+## Packages In Use
 
 - [http](https://pub.dev/packages/http) 
 - [intl](https://pub.dev/packages/intl)
@@ -90,7 +92,7 @@ You need to have **Flutter** installed on your pc.
      flutter run
     ```
 
-## Show your support
+## Show Your Support
 
 > Feel free to star ⭐ this repository, if you like what you see.
 
