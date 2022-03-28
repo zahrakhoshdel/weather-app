@@ -1,16 +1,103 @@
-# weather_app
+<h1 align="center">Flutter Weather App 🌦️</h1>
 
-A new Flutter project.
+> A weather App created using **[Flutter](https://github.com/flutter/flutter)** and **[Dart](https://dart.dev/)** and using API from **[OpenWeatherMap](https://openweathermap.org/)**
 
+## Table of Contents
+
+* [Demo](#demo)
+* [Screenshots](#screenshots)
+* [Features](#features)
+* [Packages in use](#packages)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+* [Show Your Support](#support)
+* [Author](#author)
+
+## Demo
+
+Demo Video
+
+https://github.com/zahrakhoshdel/weather-app/blob/main/screenshots/Weather%20App.mp4
+
+## 🚀 See Screenshots
+
+<details>
+<summary>See ScreenShots</summary>
+ <img src="https://github.com/zahrakhoshdel/weather-app/blob/main/screenshots/home_light.png" alt="Lhome-screen" width="200"></img>
+ <img src="https://github.com/zahrakhoshdel/weather-app/blob/main/screenshots/search_light.png" alt="Lsearch-screen" width="200"></img>
+ <img src="https://github.com/zahrakhoshdel/weather-app/blob/main/screenshots/forecast_light.png" alt="Lforecast-screen" width="200"></img>
+ <img src="https://github.com/zahrakhoshdel/weather-app/blob/main/screenshots/setting_light.png" alt="Lsetting-screen" width="200"></img>
+ 
+ <img src="https://github.com/zahrakhoshdel/weather-app/blob/main/screenshots/home_dark.png" alt="Dhome-screen" width="200"></img>
+ <img src="https://github.com/zahrakhoshdel/weather-app/blob/main/screenshots/search_dark.png" alt="sDearch-screen" width="200"></img>
+ <img src="https://github.com/zahrakhoshdel/weather-app/blob/main/screenshots/forecast_dark.png" alt="Dforecast-screen" width="200"></img>
+ <img src="https://github.com/zahrakhoshdel/weather-app/blob/main/screenshots/setting_dark.png" alt="Dsetting-screen" width="200"></img>
+</details>
+
+## Features
+
+- :white_check_mark: Beautiful UI
+- :white_check_mark: Dark and Light themes
+- :white_check_mark: Current weather: current temperature, humidity, wind speed, sunrise
+- :white_check_mark: 12-hour weather forecast
+- :white_check_mark: 7-day weather forecast
+- :white_check_mark: Search weather by city
+- :white_check_mark: Custom icons for each weather condition
+- :white_check_mark: Null safety
+
+## Packages in use
+
+- [http](https://pub.dev/packages/http) 
+- [intl](https://pub.dev/packages/intl)
+- [provider](https://pub.dev/packages/provider)
+- [shared_preferences](https://pub.dev/packages/shared_preferences)
+- [flutter_spinkit](https://pub.dev/packages/flutter_spinkit)
+    
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get a local copy up and running follow these simple steps.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Prerequisites
+You need to have **Flutter** installed on your pc.
+* [Install Flutter](https://flutter.dev/docs/get-started/install)
+* [Dart Sdk](https://dart.dev/get-dart#install)
+* [OpenWeather API Key](https://home.openweathermap.org/api_keys)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Note**: to use the API you'll need to register an account and obtain your own API key.
+
+> Create an account at OpenWeatherMap.
+> Then get your API key from [OpenWeatherAPI](https://home.openweathermap.org/api_keys).
+
+### Installation
+
+1. Clone the repo.
+    ```sh
+     git clone https://github.com/zahrakhoshdel/weather-app
+    ```
+2. Install packages.
+    ```sh
+     flutter pub get
+    ```
+3. Add OpenWeatherMap API KEY on `lib/data_service.dart`
+  ```dart
+  static const String API_KEY = 'Enter Your API key';
+  ```
+
+4. Run project.
+    ```sh
+     flutter run
+    ```
+
+## Show your support
+
+> Feel free to star ⭐ this repository, if you like what you see.
+
+## Author
+
+👤 **Zahra Khoshdel**
+
+- Github: [@zahrakhoshdel](https://github.com/zahrakhoshdel "zahrakhoshdel")
+
+
