@@ -111,6 +111,7 @@ class _SearchScreenState extends State<SearchScreen> {
                           customSearchButton(onPress: () {
                             setState(() {
                               isLoading = true;
+                              statusSearch = false;
                             });
                             return search();
                           }),
