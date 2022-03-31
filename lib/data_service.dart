@@ -41,35 +41,35 @@ class DataService {
         },
       );
 
-  Future<WeatherHourly> getCurrentWeather() async {
-    try {
-      // Position position = await Geolocator.getCurrentPosition(
-      //     desiredAccuracy: LocationAccuracy.low);
+  // Future<WeatherHourly> getCurrentWeather() async {
+  //   try {
+  //     // Position position = await Geolocator.getCurrentPosition(
+  //     //     desiredAccuracy: LocationAccuracy.low);
 
-      final Uri requestUri = weatherHourly(
-        lon: location['longitude'].toString(),
-        lat: location['latitude'].toString(),
-      );
+  //     final Uri requestUri = weatherHourly(
+  //       lon: location['longitude'].toString(),
+  //       lat: location['latitude'].toString(),
+  //     );
 
-      final http.Response response = await http.get(requestUri);
-      if (response.statusCode == 200) {
-      } else {
-        throw Exception('Failed to load data weather');
-      }
+  //     final http.Response response = await http.get(requestUri);
+  //     if (response.statusCode == 200) {
+  //     } else {
+  //       throw Exception('Failed to load data weather');
+  //     }
 
-      final Map<String, dynamic> decodedJson = json.decode(response.body);
+  //     final Map<String, dynamic> decodedJson = json.decode(response.body);
 
-      return WeatherHourly.fromMap(decodedJson);
-    } on SocketException catch (e) {
-      print(e);
-      throw "You don't have connection, try again later.";
-    } on PlatformException catch (e) {
-      throw "${e.message}, please allow the app to access your current location from the settings.";
-    } catch (e) {
-      print(e);
-      throw "Unknown error, try again.";
-    }
-  }
+  //     return WeatherHourly.fromMap(decodedJson);
+  //   } on SocketException catch (e) {
+  //     print(e);
+  //     throw "You don't have connection, try again later.";
+  //   } on PlatformException catch (e) {
+  //     throw "${e.message}, please allow the app to access your current location from the settings.";
+  //   } catch (e) {
+  //     print(e);
+  //     throw "Unknown error, try again.";
+  //   }
+  // }
 
   Future<Weather> getWeatherSearch({required String city}) async {
     try {

@@ -23,6 +23,8 @@ class SearchScreen extends StatefulWidget {
 class _SearchScreenState extends State<SearchScreen> {
   final TextEditingController _cityController = TextEditingController();
   late bool status;
+  late bool statusSearch;
+  late bool isLoading;
 
   final _dataService = DataService();
 
@@ -36,6 +38,8 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   void initState() {
     status = false;
+    statusSearch = false;
+    isLoading = false;
     getDefaultSearch();
     super.initState();
   }
@@ -68,7 +72,8 @@ class _SearchScreenState extends State<SearchScreen> {
 
         data = hourlySearched!.list.take(5).toList();
 
-        // status = true;
+        //isLoading = false;
+        statusSearch = true;
       });
     } catch (error) {
       print(error);
@@ -103,7 +108,12 @@ class _SearchScreenState extends State<SearchScreen> {
                             theme: themeChange,
                             controller: _cityController,
                           )),
-                          customSearchButton(onPress: search),
+                          customSearchButton(onPress: () {
+                            setState(() {
+                              isLoading = true;
+                            });
+                            return search();
+                          }),
                         ],
                       ),
                       const SizedBox(
@@ -139,24 +149,29 @@ class _SearchScreenState extends State<SearchScreen> {
                       const SizedBox(
                         height: 10,
                       ),
-                      if (weatherSearch != null)
-                        Container(
-                          margin: const EdgeInsets.symmetric(horizontal: 15),
-                          child: InkWell(
-                              borderRadius: BorderRadius.circular(15),
-                              onTap: () => Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (BuildContext context) {
-                                        return ForecastScreen(
-                                            theme: themeChange,
-                                            city: weatherSearch!.cityName);
-                                      },
-                                    ),
-                                  ),
-                              child: SearchLocationCard(
-                                weatherSearch: weatherSearch!,
-                              )),
-                        )
+                      !isLoading
+                          ? Container()
+                          : !statusSearch
+                              ? LoadingScreen()
+                              : Container(
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: 15),
+                                  child: InkWell(
+                                      borderRadius: BorderRadius.circular(15),
+                                      onTap: () => Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                              builder: (BuildContext context) {
+                                                return ForecastScreen(
+                                                    theme: themeChange,
+                                                    city: weatherSearch!
+                                                        .cityName);
+                                              },
+                                            ),
+                                          ),
+                                      child: SearchLocationCard(
+                                        weatherSearch: weatherSearch!,
+                                      )),
+                                )
                     ],
                   )
           ],
